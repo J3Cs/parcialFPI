@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Inicia el navbar-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="d-none d-lg-flex mr-3">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-layers-half" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3.188 8L.264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l-4.578 2.441a.5.5 0 0 1-.47 0L3.188 8z" />
+                    <path fill-rule="evenodd"
+                        d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4zM1.563 6L8 9.433 14.438 6 8 2.567 1.562 6z" />
+                </svg>
+                <a class="navbar-brand" href="./index.html"> Tienda CellPhone</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <form class="form-inline my-2">
+                <input class="form-control col-10" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </button>
+            </form>
+            <div class="ml-5 d-none d-lg-flex">
+                <button class="btn btn-outline-success" onclick="navigate('index')">Inicio</button>
+                <button class="btn btn-outline-warning" onclick="navigate('estadisticas')">Estadisticas</button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-lg-none">
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-layers-half" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3.188 8L.264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l-4.578 2.441a.5.5 0 0 1-.47 0L3.188 8z" />
+                        <path fill-rule="evenodd"
+                            d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4zM1.563 6L8 9.433 14.438 6 8 2.567 1.562 6z" />
+                    </svg>
+                    <a class="navbar-brand" href="#"> Tienda CellPhone</a>
+                </div>
+                <div class="navbar-nav ml-5 d-flex d-lg-none">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item" onclick="navigate('index')">Inicio</li>
+                        <li class="nav-item" onclick="navigate('nuevoAnuncio')">Nuevo Anuncio</li>
+                        <li class="nav-item">Carrito</li>
+                        <li class="nav-item active" onclick="navigate('estadisticas')">Estadisticas</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="float-right mr-5 d-none d-lg-flex">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill icon"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg" onclick="navigate('nuevoAnuncio')">
+                    <path fill-rule="evenodd"
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                </svg>
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cart-plus" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                    <path fill-rule="evenodd"
+                        d="M8.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 .5-.5z" />
+                </svg>
+                <span class="badge badge-dark span-height">1</span>
+            </div>
+        </nav>
+    </header>
+    <!--finaliza el navbar-->
+
+    <main class="mt-5 ml-3">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <h1 class="text-center">Grafico</h1>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+                <h1 class="text-center">Grafico Polar</h1>
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/js/chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Grafo',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                events: ['mousemove']
+            }
+        });
+        var ctx = document.getElementById('myChart2').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'polarArea',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(100, 99, 132, 0.5)',
+                        'rgba(25, 99, 132, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(100, 99, 132, 1)',
+                        'rgba(25, 99, 132, 1)'
+                    ],
+                    borderWidth: 1,
+                    data: [15, 10, 5]
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                events: ['mousemove']
+            }
+        });
+    </script>
+    <script src="./assets/js/sweetalert.min.js"></script>
+    <script src="./assets/js/navigate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
