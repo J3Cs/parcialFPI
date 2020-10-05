@@ -210,12 +210,14 @@ input:checked + .slider:before {
   height: 100%;
   border: 1px solid #fff;
 }
-.bi {
+.bi{
   transition: 0.5s;
+  cursor: pointer;
 }
-.bi:hover {
+.bi:hover{
   transform: scale(1.3);
 }
+
 .divBtn {
   position: fixed;
   bottom: 0;
@@ -228,29 +230,9 @@ input:checked + .slider:before {
   z-index: 10;
 }
 .btnFlotante {
-  width: 200px;
-  height: 50px;
+  height: 300px;
   border: 1px solid #000;
 }
-
-.swiper-container {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-
-}
-.swiper-slide button{
-  width: 100%;
-  height: 100%;
-}
-
 .formulario{
   display: flex;
   flex-direction: column;
@@ -299,8 +281,23 @@ footer select{
 }
 li.nav-item{
   padding: 10px;
+  cursor: pointer;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
 }
 li.nav-item.active{
   background: #4f17b3;
   color: #fff;
+  border-color: #fff;
+}
+#exampleModal2 .modal-body{
+  background: rgba(42, 59, 63, 1);
+}
+#exampleModal2 .modal-header{
+  background: #0ec477;
+  color: #fff;
+}
+.modal-header button{
+  background: #0ec477;
+  color: red;
 }
