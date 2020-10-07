@@ -230,8 +230,13 @@ input:checked + .slider:before {
   z-index: 10;
 }
 .btnFlotante {
-  height: 300px;
+  height: 50px;
+  width: 200px;
   border: 1px solid #000;
+}
+.btn-img{
+  border: 1px solid #000;
+  height: 300px;
 }
 .formulario{
   display: flex;
@@ -300,4 +305,12 @@ li.nav-item.active{
 .modal-header button{
   background: #0ec477;
   color: red;
+}
+tbody tr{
+  position: relative;
+  transition: 0.5s;
+}
+tbody tr:hover{
+  background: #000;
+  box-shadow:0 5px 25px #0ec477;
 }
